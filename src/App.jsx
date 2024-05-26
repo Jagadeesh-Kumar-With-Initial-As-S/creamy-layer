@@ -12,6 +12,8 @@ import Constitutional from './pages/Constitutional'
 import Constitutional_Creamy from './components/Constitutional_Creamy'
 import Constitutional_Non_Creamy from './components/Constitutional_Non_Creamy'
 import Non_Creamy from './components/Non_Creamy'
+import Public_Creamy from './components/Public_Creamy'
+import Public_Non_Creamy from './components/Public_Non_Creamy'
 
 function App() {
 	return (
@@ -48,6 +50,11 @@ function App() {
 					element={<Constitutional_Non_Creamy />}
 				/>
 				<Route path="/non_creamy" element={<Non_Creamy />} />
+				<Route path="/public_creamy" element={<Public_Creamy />} />
+				<Route
+					path="public_non_creamy"
+					element={<Public_Non_Creamy />}
+				/>
 			</Routes>
 		</BrowserRouter>
 	)

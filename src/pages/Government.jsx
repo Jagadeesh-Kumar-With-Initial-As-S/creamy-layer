@@ -8,7 +8,7 @@ export default function Government() {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
-
+		// Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837.
 		let number = document.getElementById('government').value
 		number = number.toLowerCase().trim()
 		if (number == 1) {

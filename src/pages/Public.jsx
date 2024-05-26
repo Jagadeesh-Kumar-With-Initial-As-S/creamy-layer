@@ -10,6 +10,7 @@ export default function Public() {
 		let number = document.getElementById('public').value
 		if (number == 1) {
 			navigate(`/public_creamy`)
+			// Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837.
 		} else if (number == 2) {
 			navigate(`/public_non_creamy`)
 		} else {

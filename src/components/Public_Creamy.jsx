@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-export default function Private_Creamy() {
+export default function Public_Creamy() {
 	return (
 		<div>
 			<h1>You belong to creamy layer</h1>

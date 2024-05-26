@@ -10,6 +10,7 @@ export default function Home() {
 		let number = document.getElementById('parent').value
 		number = number.toLowerCase().trim()
 		if (number == 1) {
+			// Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837.
 			navigate(`/government_sector`)
 		} else if (number == 2) {
 			navigate(`/constitutional_sector`)

@@ -10,6 +10,7 @@ export default function Private() {
 		if (income > 800000) {
 			navigate(`/private_creamy`)
 		} else {
+			// Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837.
 			navigate(`/private_non_creamy`)
 		}
 	}
