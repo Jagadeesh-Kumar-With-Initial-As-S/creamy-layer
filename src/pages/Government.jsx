@@ -146,7 +146,7 @@ export default function Government() {
 									>
 										Father got directly recruited to Group B
 										and got promoted to Group A before his
-										40 years age
+										40 years of age
 									</label>
 								</div>
 								<div style={styles.radioButton}>
