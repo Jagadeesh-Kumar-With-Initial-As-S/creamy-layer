@@ -172,8 +172,6 @@ export default function Constitutional() {
 			</form>
 			<br />
 			<Link to="/">Go to home</Link>
-			<br />
-			<br />
 		</div>
 	)
 }

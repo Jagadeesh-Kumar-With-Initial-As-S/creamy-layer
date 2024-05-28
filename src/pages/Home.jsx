@@ -1,11 +1,17 @@
 import React, { useState } from 'react'
 import { Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
+import Box from '@mui/material/Box'
+import InputLabel from '@mui/material/InputLabel'
+import MenuItem from '@mui/material/MenuItem'
+import FormControl from '@mui/material/FormControl'
+import Select from '@mui/material/Select'
 
 export default function Home() {
-	const [selectedValue, setSelectedValue] = useState()
-	const handleRadioChange = (value) => {
-		setSelectedValue(value)
+	const [parent, setParent] = React.useState('')
+
+	const handleChange = (event) => {
+		setParent(event.target.value)
 	}
 
 	const styles = {
@@ -21,7 +27,7 @@ export default function Home() {
 		},
 		radioGroup: {
 			display: 'flex',
-			flexDirection: 'column',
+			flexDirection: 'row',
 			alignItems: 'center',
 			justifyContent: 'space-around',
 			marginTop: '20px',
@@ -33,6 +39,7 @@ export default function Home() {
 		radioButton: {
 			display: 'flex',
 			flexDirection: 'row',
+			width: '500px',
 			alignItems: 'center'
 		},
 		radioLabel: {
@@ -47,16 +54,16 @@ export default function Home() {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
-		if (selectedValue == 'option1') {
+		if (parent == 'option1') {
 			// Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837.
 			navigate(`/government_sector`)
-		} else if (selectedValue == 'option2') {
+		} else if (parent == 'option2') {
 			navigate(`/constitutional_sector`)
-		} else if (selectedValue == 'option3') {
+		} else if (parent == 'option3') {
 			navigate(`/private_sector`)
-		} else if (selectedValue == 'option4') {
+		} else if (parent == 'option4') {
 			navigate(`/public_sector`)
-		} else if (selectedValue == 'option5') {
+		} else if (parent == 'option5') {
 			navigate(`/non_creamy`)
 		} else {
 			setData('Select the answer from given choices')
@@ -69,103 +76,47 @@ export default function Home() {
 					<h1 style={styles.heading}>
 						Where does your parent belong to?
 					</h1>
+
 					<h2>
 						<div style={styles.container}>
 							<div style={styles.radioGroup}>
 								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option1"
-										value="option1"
-										checked={selectedValue === 'option1'}
-										onChange={() =>
-											handleRadioChange('option1')
-										}
-									/>
-									<label
-										htmlFor="option1"
-										style={styles.radioLabel}
-									>
-										Parent currently working in Government
-										Sector
-									</label>
-								</div>
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option2"
-										value="option2"
-										checked={selectedValue === 'option2'}
-										onChange={() =>
-											handleRadioChange('option2')
-										}
-									/>
-									<label
-										htmlFor="option2"
-										style={styles.radioLabel}
-									>
-										Parent currently working in
-										Constitutional Authorities
-									</label>
-								</div>
-
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option3"
-										value="option3"
-										checked={selectedValue === 'option3'}
-										onChange={() =>
-											handleRadioChange('option3')
-										}
-									/>
-									<label
-										htmlFor="option3"
-										style={styles.radioLabel}
-									>
-										Parent currently working in Private
-										Sector
-									</label>
-								</div>
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option4"
-										value="option4"
-										checked={selectedValue === 'option4'}
-										onChange={() =>
-											handleRadioChange('option4')
-										}
-									/>
-									<label
-										htmlFor="option4"
-										style={styles.radioLabel}
-									>
-										Parent currently working in Public
-										Sector Undertakings
-									</label>
-								</div>
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option5"
-										value="option5"
-										checked={selectedValue === 'option5'}
-										onChange={() =>
-											handleRadioChange('option5')
-										}
-									/>
-									<label
-										htmlFor="option5"
-										style={styles.radioLabel}
-									>
-										Father and mother are retired or dead
-									</label>
+									<Box sx={{ minWidth: 500 }}>
+										<FormControl fullWidth>
+											<InputLabel id="demo-simple-select-label">
+												Parent currently working in
+											</InputLabel>
+											<Select
+												labelId="demo-simple-select-label"
+												id="demo-simple-select"
+												value={parent}
+												label=""
+												onChange={handleChange}
+											>
+												<MenuItem value={'option1'}>
+													Government Sector
+												</MenuItem>
+												<MenuItem value={'option2'}>
+													Constitutional Authorities
+												</MenuItem>
+												<MenuItem value={'option3'}>
+													Private Sector
+												</MenuItem>
+												<MenuItem value={'option4'}>
+													Public Sector Undertakings
+												</MenuItem>
+												<MenuItem value={'option5'}>
+													Others
+												</MenuItem>
+											</Select>
+										</FormControl>
+									</Box>
 								</div>
 							</div>
 						</div>
 					</h2>
 				</div>
+
 				<br />
 				<Button variant="contained" type="submit">
 					Submit
