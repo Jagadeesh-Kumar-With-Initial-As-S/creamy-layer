@@ -20,6 +20,12 @@ export default function Private() {
 			<h1>Parent belong in Private Sector</h1>
 			<br />
 			<h2>
+				Hint: You belong to creamy layer if annual income of your parent
+				for <u>three consecutive years</u> is more than <u>₹800000</u>{' '}
+				while
+				<u> not including salary</u> and <u>income from agriculture</u>
+				<br />
+				<br />
 				Enter the annual income of your parents for three consecutive
 				years while not including salary and income from agriculture in
 				rupees.
