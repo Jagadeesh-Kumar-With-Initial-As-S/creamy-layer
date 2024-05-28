@@ -1,15 +1,15 @@
 import { useEffect } from 'react'
 const Translator = () => {
 	const googleTranslateElementInit = () => {
-			new window.google.translate.TranslateElement(
-				// Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837.
-				{
-					pageLanguage: 'en',
-					autoDisplay: false
-				},
-				'google_translate_element'
-			)
-		}
+		new window.google.translate.TranslateElement(
+			// Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837.
+			{
+				pageLanguage: 'en',
+				autoDisplay: false
+			},
+			'google_translate_element'
+		)
+	}
 	useEffect(() => {
 		var addScript = document.createElement('script')
 		addScript.setAttribute(

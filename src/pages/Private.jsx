@@ -1,4 +1,4 @@
-import TextField from '@mui/material/TextField'
+import { TextField, Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 export default function Private() {
@@ -19,10 +19,12 @@ export default function Private() {
 		<div>
 			<h1>Parent belong in Private Sector</h1>
 			<br />
-			<h2></h2>
-			Enter the annual income of your parents for three consecutive years
-			while not including salary and income from agriculture in rupees.
-			<br />
+			<h2>
+				Enter the annual income of your parents for three consecutive
+				years while not including salary and income from agriculture in
+				rupees.
+				<br />
+			</h2>
 			<form action="" onSubmit={handleSubmit}>
 				<div>
 					<br />
@@ -31,13 +33,19 @@ export default function Private() {
 						type="number"
 						label="Parent income"
 						variant="outlined"
+						color="secondary"
+						focused
 					/>
 				</div>
 				<br />
-				<button type="submit">Submit</button>
+				<Button variant="contained" type="submit">
+					Submit
+				</Button>
 			</form>
 			<br />
 			<Link to="/">Go to home</Link>
+			<br />
+			<br />
 		</div>
 	)
 }

@@ -6,6 +6,8 @@ export default function Non_Creamy() {
 			{/* Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837. */}
 			<h2>You have age relaxation.</h2>
 			<Link to="/">Go to home</Link>
+			<br />
+			<br />
 		</div>
 	)
 }
