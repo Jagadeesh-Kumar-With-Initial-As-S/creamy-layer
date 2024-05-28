@@ -1,14 +1,18 @@
 import { TextField, Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 export default function Private() {
 	const navigate = useNavigate()
-
+	const [data, setData] = useState('Submit')
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		let income = document.getElementById('income').value
 		if (income > 800000) {
 			navigate(`/private_creamy`)
+		}
+		if (income == '') {
+			setData('Enter the money in rupee')
 		} else {
 			// Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837.
 			navigate(`/private_non_creamy`)
@@ -48,6 +52,9 @@ export default function Private() {
 					Submit
 				</Button>
 			</form>
+			<br />
+			{data}
+			<br />
 			<br />
 			<Link to="/">Go to home</Link>
 			<br />
