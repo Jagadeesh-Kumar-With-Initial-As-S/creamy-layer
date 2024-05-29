@@ -109,11 +109,18 @@ body{
 }
 }
 
+
+
 @media (prefers-color-scheme: dark) {
   
   .group {
    
     background-color:black;
+  
+  }
+ #demo-simple-select {
+   
+    background-color:white;
   
   }
   
