@@ -2,10 +2,15 @@ import { Link } from 'react-router-dom'
 import { Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import Box from '@mui/material/Box'
+import InputLabel from '@mui/material/InputLabel'
+import MenuItem from '@mui/material/MenuItem'
+import FormControl from '@mui/material/FormControl'
+import Select from '@mui/material/Select'
 export default function Public() {
 	const [selectedValue, setSelectedValue] = useState()
-	const handleRadioChange = (value) => {
-		setSelectedValue(value)
+	const handleChange = (event) => {
+		setSelectedValue(event.target.value)
 	}
 	const styles = {
 		container: {
@@ -58,60 +63,49 @@ export default function Public() {
 		<div>
 			<form action="" onSubmit={handleSubmit}>
 				<div>
-					<h1 style={styles.heading}>
+					<div className="heading">
 						Does your parent working in Public Sector Undertakings
-						and have following benefits?
-					</h1>
+						and have any one of the following benefits?
+					</div>
 					<h2>
-						<div style={styles.container}>
-							<div style={styles.radioGroup}>
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option1"
-										value="option1"
-										checked={selectedValue === 'option1'}
-										onChange={() =>
-											handleRadioChange('option1')
-										}
-									/>
-									<label
-										htmlFor="option1"
-										style={styles.radioLabel}
-									>
-										Managerial Level Post
-									</label>
-								</div>
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option2"
-										value="option2"
-										checked={selectedValue === 'option2'}
-										onChange={() =>
-											handleRadioChange('option2')
-										}
-									/>
-									<label
-										htmlFor="option2"
-										style={styles.radioLabel}
-									>
-										Others
-									</label>
+						<div className="container">
+							<div className="group">
+								<div className="text-container">
+									Parent currently working in Government
+									Sector as
+									<Box>
+										<FormControl>
+											<InputLabel id="demo-simple-select-label">
+												Parent currently working in
+												Government Sector as
+											</InputLabel>
+											<Select
+												labelId="demo-simple-select-label"
+												id="demo-simple-select"
+												value={selectedValue}
+												label=""
+												onChange={handleChange}
+											>
+												<MenuItem value={'option1'}>
+													Managerial Level Post
+												</MenuItem>
+												<MenuItem value={'option2'}>
+													Others
+												</MenuItem>
+											</Select>
+										</FormControl>
+									</Box>
 								</div>
 							</div>
 						</div>
 					</h2>
 				</div>
-				<br />
 				<Button variant="contained" type="submit">
 					Submit
 				</Button>
 				<br />
-				<br />
 				{data}
 			</form>
-			<br />
 			<Link to="/">Go to home</Link>
 			<br />
 			<br />

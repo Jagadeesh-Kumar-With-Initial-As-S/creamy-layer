@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom'
 export default function Public_Creamy() {
 	return (
 		<div>
-			<h1>You belong to creamy layer</h1>
-			<h2>
+			<div className="heading">You belong to creamy layer</div>
+			<div className="text-container">
 				{/* Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837. */}
 				You have no age relaxation.
-			</h2>
+			</div>
 			<Link to="/">Go to home</Link>
 			<br />
 			<br />

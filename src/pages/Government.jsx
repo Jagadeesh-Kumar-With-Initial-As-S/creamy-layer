@@ -2,44 +2,18 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '@mui/material'
 import { useState } from 'react'
+import Box from '@mui/material/Box'
+import InputLabel from '@mui/material/InputLabel'
+import MenuItem from '@mui/material/MenuItem'
+import FormControl from '@mui/material/FormControl'
+import Select from '@mui/material/Select'
 export default function Government() {
 	const [selectedValue, setSelectedValue] = useState()
-	const handleRadioChange = (value) => {
-		setSelectedValue(value)
+	const handleChange = (event) => {
+		setSelectedValue(event.target.value)
 	}
-	const styles = {
-		container: {
-			display: 'flex',
-			flex: 1,
-			justifyContent: 'center',
-			alignItems: 'center'
-		},
-		heading: {
-			color: 'green',
-			textAlign: 'center'
-		},
-		radioGroup: {
-			display: 'flex',
-			flexDirection: 'column',
-			alignItems: 'center',
-			justifyContent: 'space-around',
-			marginTop: '20px',
-			borderRadius: '8px',
-			backgroundColor: 'white',
-			padding: '30px',
-			boxShadow: '0px 2px 3.84px rgba(0, 0, 0, 0.25)'
-		},
-		radioButton: {
-			display: 'flex',
-			flexDirection: 'row',
-			alignItems: 'center'
-		},
-		radioLabel: {
-			marginLeft: '8px',
-			fontSize: '17px',
-			color: '#333'
-		}
-	}
+	// Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837.
+
 	const navigate = useNavigate()
 	const [data, setData] = useState('Submit')
 
@@ -65,123 +39,78 @@ export default function Government() {
 		<div>
 			<form action="" onSubmit={handleSubmit}>
 				<div>
-					<h1 style={styles.heading}>
+					<div className="heading">
 						Does your parents working in Government Sector and have
 						following benefits?
-					</h1>
+					</div>
 					<h2>
-						<div style={styles.container}>
-							<div style={styles.radioGroup}>
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option1"
-										value="option1"
-										checked={selectedValue === 'option1'}
-										onChange={() =>
-											handleRadioChange('option1')
-										}
-									/>
-									<label
-										htmlFor="option1"
-										style={styles.radioLabel}
-									>
-										Father AND Mother got Directly recruited
-										to Group A/Class 1 Officers before their
-										40 years of age.
-									</label>
-								</div>
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option2"
-										value="option2"
-										checked={selectedValue === 'option2'}
-										onChange={() =>
-											handleRadioChange('option2')
-										}
-									/>
-									<label
-										htmlFor="option2"
-										style={styles.radioLabel}
-									>
-										Father OR Mother got directly recruited
-										to Group A/Class 1 Officers before their
-										40 years of age.
-									</label>
-								</div>
-
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option3"
-										value="option3"
-										checked={selectedValue === 'option3'}
-										onChange={() =>
-											handleRadioChange('option3')
-										}
-									/>
-									<label
-										htmlFor="option3"
-										style={styles.radioLabel}
-									>
-										Father AND Mother got directly recruited
-										to Group B/Class 2 Officers before their
-										40 years of age.
-									</label>
-								</div>
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option4"
-										value="option4"
-										checked={selectedValue === 'option4'}
-										onChange={() =>
-											handleRadioChange('option4')
-										}
-									/>
-									<label
-										htmlFor="option4"
-										style={styles.radioLabel}
-									>
-										Father got directly recruited to Group B
-										and got promoted to Group A before his
-										40 years of age
-									</label>
-								</div>
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option5"
-										value="option5"
-										checked={selectedValue === 'option5'}
-										onChange={() =>
-											handleRadioChange('option5')
-										}
-									/>
-									<label
-										htmlFor="option5"
-										style={styles.radioLabel}
-									>
-										Others
-									</label>
+						<div className="container">
+							<div className="group">
+								<div className="text-container">
+									Parent currently working in Government
+									Sector as
+									<Box>
+										<FormControl>
+											<InputLabel id="demo-simple-select-label">
+												Parent currently working in
+												Government Sector as
+											</InputLabel>
+											<Select
+												labelId="demo-simple-select-label"
+												id="demo-simple-select"
+												value={selectedValue}
+												label=""
+												onChange={handleChange}
+											>
+												<MenuItem value={'option1'}>
+													Father AND Mother got
+													<br />
+													Directly recruited to Group
+													<br />
+													A/Class 1 Officers
+												</MenuItem>
+												<MenuItem value={'option2'}>
+													Father OR Mother got
+													<br />
+													directly recruited to Group
+													<br />
+													A/Class 1 Officer
+												</MenuItem>
+												<MenuItem value={'option3'}>
+													Father AND Mother got
+													<br />
+													directly recruited to Group
+													<br />
+													B/Class 2 Officers
+												</MenuItem>
+												<MenuItem value={'option4'}>
+													Father got directly
+													<br />
+													recruited to Group B and got
+													<br />
+													promoted to Group A before
+													<br />
+													his 40 years of age
+												</MenuItem>
+												<MenuItem value={'option5'}>
+													Others
+												</MenuItem>
+											</Select>
+										</FormControl>
+									</Box>
 								</div>
 							</div>
 						</div>
 					</h2>
 				</div>
-				<br />
 				<Button variant="contained" type="submit">
 					Submit
 				</Button>
 				<br />
-				<br />
 				{data}
+				<br />
+				<Link to="/">Go to home</Link>
 			</form>
-			<br />
-			<Link to="/">Go to home</Link>
-			<br />
-			<br />
 		</div>
 	)
 }

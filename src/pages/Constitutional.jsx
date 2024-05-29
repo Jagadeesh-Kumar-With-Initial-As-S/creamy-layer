@@ -1,47 +1,18 @@
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '@mui/material'
-import { useState } from 'react'
+import { React, useState } from 'react'
+import Box from '@mui/material/Box'
+import InputLabel from '@mui/material/InputLabel'
+import MenuItem from '@mui/material/MenuItem'
+import FormControl from '@mui/material/FormControl'
+import Select from '@mui/material/Select'
 export default function Constitutional() {
 	const [selectedValue, setSelectedValue] = useState()
-	const handleRadioChange = (value) => {
-		setSelectedValue(value)
+	const handleChange = (event) => {
+		setSelectedValue(event.target.value)
 	}
 	// Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837.
-
-	const styles = {
-		container: {
-			display: 'flex',
-			flex: 1,
-			justifyContent: 'center',
-			alignItems: 'center'
-		},
-		heading: {
-			color: 'green',
-			textAlign: 'center'
-		},
-		radioGroup: {
-			display: 'flex',
-			flexDirection: 'column',
-			alignItems: 'center',
-			justifyContent: 'space-around',
-			marginTop: '20px',
-			borderRadius: '8px',
-			backgroundColor: 'white',
-			padding: '30px',
-			boxShadow: '0px 2px 3.84px rgba(0, 0, 0, 0.25)'
-		},
-		radioButton: {
-			display: 'flex',
-			flexDirection: 'row',
-			alignItems: 'center'
-		},
-		radioLabel: {
-			marginLeft: '8px',
-			fontSize: '17px',
-			color: '#333'
-		}
-	}
 	const navigate = useNavigate()
 	const [data, setData] = useState('Submit')
 	const handleSubmit = async (e) => {
@@ -65,98 +36,47 @@ export default function Constitutional() {
 		<div>
 			<form action="" onSubmit={handleSubmit}>
 				<div>
-					<h1 style={styles.heading}>
-						Does your parents working as Constitutional Authorities
-						and have following benefits?
+					<h1 className="heading">
+						Does your parents working in Constitutional Authorities
+						and have one one of the following benefits?
 					</h1>
 					<h2>
-						<div style={styles.container}>
-							<div style={styles.radioGroup}>
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option1"
-										value="option1"
-										checked={selectedValue === 'option1'}
-										onChange={() =>
-											handleRadioChange('option1')
-										}
-									/>
-									<label
-										htmlFor="option1"
-										style={styles.radioLabel}
-									>
-										President
-									</label>
-								</div>
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option2"
-										value="option2"
-										checked={selectedValue === 'option2'}
-										onChange={() =>
-											handleRadioChange('option2')
-										}
-									/>
-									<label
-										htmlFor="option2"
-										style={styles.radioLabel}
-									>
-										Vice President
-									</label>
-								</div>
-
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option3"
-										value="option3"
-										checked={selectedValue === 'option3'}
-										onChange={() =>
-											handleRadioChange('option3')
-										}
-									/>
-									<label
-										htmlFor="option3"
-										style={styles.radioLabel}
-									>
-										Judges
-									</label>
-								</div>
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option4"
-										value="option4"
-										checked={selectedValue === 'option4'}
-										onChange={() =>
-											handleRadioChange('option4')
-										}
-									/>
-									<label
-										htmlFor="option4"
-										style={styles.radioLabel}
-									>
-										Governors
-									</label>
-								</div>
-								<div style={styles.radioButton}>
-									<input
-										type="radio"
-										id="option5"
-										value="option5"
-										checked={selectedValue === 'option5'}
-										onChange={() =>
-											handleRadioChange('option5')
-										}
-									/>
-									<label
-										htmlFor="option5"
-										style={styles.radioLabel}
-									>
-										Others
-									</label>
+						<div className="container">
+							<div className="group">
+								<div className="text-container">
+									Parent currently working in Constitutional
+									Authorities as
+									<Box>
+										<FormControl>
+											<InputLabel id="demo-simple-select-label">
+												Parent currently working in
+												Constitutional Authorities as
+											</InputLabel>
+											<Select
+												labelId="demo-simple-select-label"
+												id="demo-simple-select"
+												value={selectedValue}
+												label=""
+												onChange={handleChange}
+											>
+												<MenuItem value={'option1'}>
+													President
+												</MenuItem>
+												<MenuItem value={'option2'}>
+													Vice President
+												</MenuItem>
+												<MenuItem value={'option3'}>
+													Judges
+												</MenuItem>
+												<MenuItem value={'option4'}>
+													Governors
+												</MenuItem>
+												<MenuItem value={'option5'}>
+													Others
+												</MenuItem>
+											</Select>
+										</FormControl>
+									</Box>
 								</div>
 							</div>
 						</div>
@@ -172,6 +92,8 @@ export default function Constitutional() {
 			</form>
 			<br />
 			<Link to="/">Go to home</Link>
+			<br />
+			<br />
 		</div>
 	)
 }

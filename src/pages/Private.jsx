@@ -22,24 +22,18 @@ export default function Private() {
 			navigate(`/private_non_creamy`)
 		}
 	}
+	document.body.style.overflow = 'visible'
 
 	return (
 		<div>
-			<h1>Parent belong in Private Sector</h1>
-			<br />
-			<h2>
-				<br />
-				<br />
+			<div className="heading">Parent belong in Private Sector</div>
+			<div className="text-container">
 				Enter the annual income of your parents for three consecutive
 				years while not including salary and income from agriculture in
 				rupee.
-				<br />
-			</h2>
+			</div>
 			<form action="" onSubmit={handleSubmit}>
 				<div>
-					<br />
-					<br />
-
 					<TextField
 						id="income1"
 						type="number"
@@ -98,12 +92,9 @@ export default function Private() {
 					Submit
 				</Button>
 			</form>
-			<br />
 			{data}
 			<br />
-			<br />
 			<Link to="/">Go to home</Link>
-			<br />
 			<br />
 		</div>
 	)
