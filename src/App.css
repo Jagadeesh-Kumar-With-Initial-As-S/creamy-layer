@@ -52,7 +52,7 @@ align-items: center;
 }
 #demo-simple-select {
   
-  min-Width: 500
+  min-width: 500
 }
 .heading{
   font-size:1.6rem;
@@ -74,7 +74,7 @@ align-items: center;
   }
 
   #demo-simple-select {
-    min-Width: 200
+    min-width: 200
   }
 
   .text-container {
