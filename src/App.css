@@ -108,3 +108,13 @@ body{
   overflow:hidden;
 }
 }
+
+@media (prefers-color-scheme: dark) {
+  
+  .group {
+   
+    background-color:black;
+  
+  }
+  
+}
