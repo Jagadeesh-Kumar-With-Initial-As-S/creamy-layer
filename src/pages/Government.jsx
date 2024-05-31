@@ -65,7 +65,7 @@ export default function Government() {
                   Father got directly recruited to
                   <Box>
                     <FormControl>
-                      <InputLabel id="demo-simple-select-label">
+                      <InputLabel className="demo-simple-select-label">
                         Father got directly recruited to
                       </InputLabel>
                       <Select
@@ -92,7 +92,7 @@ export default function Government() {
                     Father got directly recruited to
                     <Box>
                       <FormControl>
-                        <InputLabel id="demo-simple-select-label">
+                        <InputLabel className="demo-simple-select-label">
                           Father got promoted to
                         </InputLabel>
                         <Select
@@ -116,7 +116,7 @@ export default function Government() {
                   Mother got directly recruited to
                   <Box>
                     <FormControl>
-                      <InputLabel id="demo-simple-select-label">
+                      <InputLabel className="demo-simple-select-label">
                         Mother got directly recruited to
                       </InputLabel>
                       <Select

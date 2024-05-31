@@ -116,8 +116,20 @@ body {
 } */
 }
 
+@media (prefers-color-scheme: light) {
+  .group {
+    background-color: white;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   #demo-simple-select {
     background-color: white;
+  }
+  .demo-simple-select {
+    background-color: white;
+  }
+  .group {
+    background-color: black;
   }
 }
