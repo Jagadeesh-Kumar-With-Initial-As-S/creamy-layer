@@ -26,65 +26,76 @@ export default function Private() {
   return (
     <div>
       <div className="heading">Parent belong in Private Sector</div>
-      <div className="text-container">
-        Enter the annual income of your parents for past three consecutive years
-        while not including salary and income from agriculture in rupee.
-      </div>
-      <form action="" onSubmit={handleSubmit}>
-        <div>
-          <TextField
-            id="income1"
-            type="number"
-            label="Parent income in 1st year"
-            variant="outlined"
-            color="secondary"
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">₹</InputAdornment>
-              ),
-            }}
-            focused
-            required
-          />
-          <br />
-          <br />
-          <TextField
-            id="income2"
-            type="number"
-            label="Parent income in 2nd year"
-            variant="outlined"
-            color="secondary"
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">₹</InputAdornment>
-              ),
-            }}
-            focused
-            required
-          />
-          <br />
-          <br />
-          <TextField
-            id="income3"
-            type="number"
-            label="Parent income in 3rd year"
-            variant="outlined"
-            color="secondary"
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">₹</InputAdornment>
-              ),
-            }}
-            focused
-            required
-          />
+      <form onSubmit={handleSubmit}>
+        <div className="container">
+          <div className="group">
+            <div className="text-container">
+              Enter the annual income of your parents for past three consecutive
+              years while not including salary and income from agriculture in
+              rupee.
+            </div>
+            <form action="" onSubmit={handleSubmit}>
+              <div>
+                <TextField
+                  id="income1"
+                  type="number"
+                  label="Parent income in 1st year"
+                  variant="outlined"
+                  color="secondary"
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">₹</InputAdornment>
+                    ),
+                  }}
+                  focused
+                  required
+                />
+                <br />
+                <br />
+                <TextField
+                  id="income2"
+                  type="number"
+                  label="Parent income in 2nd year"
+                  variant="outlined"
+                  color="secondary"
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">₹</InputAdornment>
+                    ),
+                  }}
+                  focused
+                  required
+                />
+                <br />
+                <br />
+                <TextField
+                  id="income3"
+                  type="number"
+                  label="Parent income in 3rd year"
+                  variant="outlined"
+                  color="secondary"
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">₹</InputAdornment>
+                    ),
+                  }}
+                  focused
+                  required
+                />
+              </div>
+              <br />
+              <Button variant="contained" type="submit">
+                Submit
+              </Button>
+              <br />
+              <br />
+            </form>
+          </div>
         </div>
-        <br />
-        <Button variant="contained" type="submit">
-          Submit
-        </Button>
       </form>
+      <br />
       {data}
+      <br />
       <br />
       <Link to="/">Go to home</Link>
       <br />
