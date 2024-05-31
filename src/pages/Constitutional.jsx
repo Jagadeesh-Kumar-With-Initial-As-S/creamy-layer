@@ -87,12 +87,9 @@ export default function Constitutional() {
 					Submit
 				</Button>
 				<br />
-				<br />
 				{data}
 			</form>
-			<br />
 			<Link to="/">Go to home</Link>
-			<br />
 			<br />
 		</div>
 	)
