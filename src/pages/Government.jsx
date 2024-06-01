@@ -46,6 +46,8 @@ export default function Government() {
       navigate(`/government_non_creamy`);
     } else if (selectedValue == "option3" && mother == "option3") {
       navigate(`/government_non_creamy`);
+    } else if (selectedValue == "option4" || mother == "option4") {
+      navigate(`/private_sector`);
     } else {
       setData("Select the answer from given choices");
     }
@@ -82,7 +84,10 @@ export default function Government() {
                         <MenuItem value={"option2"}>
                           Group B/Class 2 Officers
                         </MenuItem>
-                        <MenuItem value={"option3"}>Others</MenuItem>
+                        <MenuItem value={"option3"}>
+                          Other Government Sector
+                        </MenuItem>
+                        <MenuItem value={"option4"}>Private Sector</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
@@ -133,7 +138,10 @@ export default function Government() {
                         <MenuItem value={"option2"}>
                           Group B/Class 2 Officer
                         </MenuItem>
-                        <MenuItem value={"option3"}>Others</MenuItem>
+                        <MenuItem value={"option3"}>
+                          Other Government Sector
+                        </MenuItem>
+                        <MenuItem value={"option4"}>Private Sector</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
