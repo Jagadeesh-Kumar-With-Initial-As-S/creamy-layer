@@ -34,64 +34,63 @@ export default function Private() {
               years while not including salary and income from agriculture in
               rupee.
             </div>
-            <form action="" onSubmit={handleSubmit}>
-              <div>
-                <TextField
-                  id="income1"
-                  type="number"
-                  label="Parent income in 1st year"
-                  variant="outlined"
-                  color="secondary"
-                  InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">₹</InputAdornment>
-                    ),
-                  }}
-                  focused
-                  required
-                />
-                <br />
-                <br />
-                <TextField
-                  id="income2"
-                  type="number"
-                  label="Parent income in 2nd year"
-                  variant="outlined"
-                  color="secondary"
-                  InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">₹</InputAdornment>
-                    ),
-                  }}
-                  focused
-                  required
-                />
-                <br />
-                <br />
-                <TextField
-                  id="income3"
-                  type="number"
-                  label="Parent income in 3rd year"
-                  variant="outlined"
-                  color="secondary"
-                  InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">₹</InputAdornment>
-                    ),
-                  }}
-                  focused
-                  required
-                />
-              </div>
-              <br />
-              <Button variant="contained" type="submit">
-                Submit
-              </Button>
+
+            <div>
+              <TextField
+                id="income1"
+                type="number"
+                label="Parent income in 1st year"
+                variant="outlined"
+                color="secondary"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">₹</InputAdornment>
+                  ),
+                }}
+                focused
+                required
+              />
               <br />
               <br />
-            </form>
+              <TextField
+                id="income2"
+                type="number"
+                label="Parent income in 2nd year"
+                variant="outlined"
+                color="secondary"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">₹</InputAdornment>
+                  ),
+                }}
+                focused
+                required
+              />
+              <br />
+              <br />
+              <TextField
+                id="income3"
+                type="number"
+                label="Parent income in 3rd year"
+                variant="outlined"
+                color="secondary"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">₹</InputAdornment>
+                  ),
+                }}
+                focused
+                required
+              />
+            </div>
+
+            <br />
           </div>
         </div>
+        <br />
+        <Button variant="contained" type="submit">
+          Submit
+        </Button>
       </form>
       <br />
       {data}

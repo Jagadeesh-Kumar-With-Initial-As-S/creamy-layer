@@ -15,6 +15,7 @@ const Translator = () => {
     }
 
     duplicate_google_translate_counter++;
+
     Window.location.reload();
   };
   useEffect(() => {
