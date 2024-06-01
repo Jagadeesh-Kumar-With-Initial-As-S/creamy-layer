@@ -53,6 +53,9 @@ body {
 .heading {
   font-size: 1.6rem;
 }
+.highlight {
+  color: red;
+}
 
 /* media queries for responsiveness */
 

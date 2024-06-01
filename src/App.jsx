@@ -14,9 +14,13 @@ import Constitutional_Non_Creamy from "./components/Constitutional_Non_Creamy";
 import Non_Creamy from "./components/Non_Creamy";
 import Public_Creamy from "./components/Public_Creamy";
 import Public_Non_Creamy from "./components/Public_Non_Creamy";
-// import DrawerAppBar from "./components/DrawerAppBar";
 import Translator from "./components/Translator";
-// import { StyledEngineProvider } from "@mui/material/styles";
+import PrivateFather from "./components/PrivateFather";
+import PrivateFatherCreamy from "./components/PrivateFatherCreamy";
+import PrivateFatherNonCreamy from "./components/PrivateFatherNonCreamy";
+import PrivateMother from "./components/PrivateMother";
+import PrivateMotherCreamy from "./components/PrivateMotherCreamy";
+import PrivateMotherNonCreamy from "./components/PrivateMotherNonCreamy";
 
 function App() {
   return (
@@ -50,6 +54,20 @@ function App() {
         <Route path="/non_creamy" element={<Non_Creamy />} />
         <Route path="/public_creamy" element={<Public_Creamy />} />
         <Route path="public_non_creamy" element={<Public_Non_Creamy />} />
+        <Route path="/PrivateFather" element={<PrivateFather />} />
+        <Route path="/PrivateFatherCreamy" element={<PrivateFatherCreamy />} />
+        <Route
+          path="/PrivateFatherNonCreamy"
+          element={<PrivateFatherNonCreamy />}
+        />
+        <Route path="/PrivateMother" element={<PrivateMother />} />
+        <Route path="/PrivateMotherCreamy" element={<PrivateMotherCreamy />} />
+        <Route
+          path="/PrivateMotherNonCreamy"
+          element={<PrivateMotherNonCreamy />}
+        />
+
+        <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

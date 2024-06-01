@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-export default function Private_Creamy() {
-  document.body.style.overflow = "visible";
+export default function PrivateMotherCreamy() {
   return (
     <div>
       <div className="heading">You belong to creamy layer</div>
@@ -9,9 +8,9 @@ export default function Private_Creamy() {
         You have no age relaxation.
       </div>
       <div className="">
-        Hint: You belong to creamy layer if annual income of your parent for{" "}
-        <span className="highlight">three consecutive years</span> is more than{" "}
-        <span className="highlight">₹800000</span> while
+        Hint: You belong to creamy layer if annual income of your mother for{" "}
+        <span className="highlight">past three consecutive years</span> is more
+        than <span className="highlight">₹800000</span> while
         <span className="highlight"> not including salary</span> and{" "}
         <span className="highlight">income from agriculture</span>
       </div>

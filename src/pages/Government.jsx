@@ -46,8 +46,14 @@ export default function Government() {
       navigate(`/government_non_creamy`);
     } else if (selectedValue == "option3" && mother == "option3") {
       navigate(`/government_non_creamy`);
-    } else if (selectedValue == "option4" || mother == "option4") {
+    } else if (selectedValue == "option4" && mother == "option4") {
       navigate(`/private_sector`);
+    } else if (selectedValue == "option4") {
+      navigate(`/PrivateFather`);
+    } else if (mother == "option4") {
+      navigate(`/PrivateMother`);
+    } else if (selectedValue == "option5" && mother == "option5") {
+      navigate(`/government_non_creamy`);
     } else {
       setData("Select the answer from given choices");
     }
@@ -88,6 +94,7 @@ export default function Government() {
                           Other Government Sector
                         </MenuItem>
                         <MenuItem value={"option4"}>Private Sector</MenuItem>
+                        <MenuItem value={"option5"}>Others</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
@@ -142,6 +149,7 @@ export default function Government() {
                           Other Government Sector
                         </MenuItem>
                         <MenuItem value={"option4"}>Private Sector</MenuItem>
+                        <MenuItem value={"option5"}>Others</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>

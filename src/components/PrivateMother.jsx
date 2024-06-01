@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import InputAdornment from "@mui/material/InputAdornment";
-export default function Private() {
+export default function PrivateMother() {
   const navigate = useNavigate();
   const [data, setData] = useState("Submit");
   const handleSubmit = async (e) => {
@@ -13,27 +13,25 @@ export default function Private() {
     let income3 = document.getElementById("income3").value;
     let totalIncome = income1 + income2 + income3;
     if (totalIncome > 800000) {
-      navigate(`/private_creamy`);
+      navigate(`/PrivateMotherCreamy`);
     }
     if (totalIncome == "") {
       setData("Enter the money in rupee");
     } else {
       // Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837.
-      navigate(`/private_non_creamy`);
+      navigate(`/PrivateMotherNonCreamy`);
     }
   };
 
   return (
     <div>
-      <div className="heading">
-        Parent belong to <span className="highlight">Private Sector</span>
-      </div>
+      <div className="heading">Mother belong to Private Sector</div>
       <form onSubmit={handleSubmit}>
         <div className="container">
           <div className="group">
             <div className="text-container">
-              Enter the annual income of your parent for
-              <span className="highlight">past three consecutive years</span>
+              Enter the annual income of your mother for{" "}
+              <span className="highlight">past three consecutive years</span>{" "}
               while not including salary and income from agriculture in rupee.
             </div>
 
