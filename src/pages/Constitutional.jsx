@@ -37,9 +37,13 @@ export default function Constitutional() {
     } else if (selectedValue == "option6" && mother == "option6") {
       navigate(`/private_sector`);
     } else if (selectedValue == "option6" && mother == "option7") {
-      navigate(`/FatherPrivate`);
+      navigate(`/PrivateFather`);
+    } else if (selectedValue == "option6" && mother == "option5") {
+      navigate(`/PrivateFather`);
+    } else if (selectedValue == "option5" && mother == "option6") {
+      navigate(`/PrivateMother`);
     } else if (selectedValue == "option7" && mother == "option6") {
-      navigate(`/MotherPrivate`);
+      navigate(`/PrivateMother`);
     } else if (selectedValue == "option7" && mother == "option5") {
       navigate(`/constitutional_non_creamy`);
     } else if (selectedValue == "option8" && mother == "option8") {
