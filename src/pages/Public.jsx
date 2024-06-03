@@ -30,13 +30,13 @@ export default function Public() {
     } else if (selectedValue == "option3" && mother == "option3") {
       navigate(`/private_sector`);
     } else if (selectedValue == "option3" && mother == "option2") {
-      navigate(`/FatherPrivate`);
+      navigate(`/PrivateFather`);
     } else if (selectedValue == "option2" && mother == "option3") {
-      navigate(`/MotherPrivate`);
+      navigate(`/PrivateMother`);
     } else if (selectedValue == "option3" && mother == "option4") {
-      navigate(`/FatherPrivate`);
+      navigate(`/PrivateFather`);
     } else if (selectedValue == "option4" && mother == "option3") {
-      navigate(`/MotherPrivate`);
+      navigate(`/PrivateMother`);
     } else if (selectedValue == "option4" && mother == "option4") {
       navigate(`/public_non_creamy`);
     } else {
