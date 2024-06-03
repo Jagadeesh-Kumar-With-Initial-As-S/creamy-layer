@@ -105,7 +105,7 @@ export default function Government() {
                 </div>
                 {selectedValue == "option2" ? (
                   <div className="text-container">
-                    Father got directly recruited to
+                    Father got <span className="highlight">promoted</span> to
                     <Box>
                       <FormControl>
                         <InputLabel className="demo-simple-select-label">
