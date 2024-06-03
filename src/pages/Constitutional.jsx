@@ -40,6 +40,8 @@ export default function Constitutional() {
       navigate(`/FatherPrivate`);
     } else if (selectedValue == "option7" && mother == "option6") {
       navigate(`/MotherPrivate`);
+    } else if (selectedValue == "option7" && mother == "option5") {
+      navigate(`/constitutional_non_creamy`);
     } else if (selectedValue == "option8" && mother == "option8") {
       navigate(`/constitutional_non_creamy`);
     } else {
