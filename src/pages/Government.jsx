@@ -46,6 +46,8 @@ export default function Government() {
       navigate(`/government_non_creamy`);
     } else if (selectedValue == "option3" && mother == "option3") {
       navigate(`/government_non_creamy`);
+    } else if (selectedValue == "option3" && mother == "option2") {
+      navigate(`/government_non_creamy`);
     } else if (selectedValue == "option4" && mother == "option4") {
       navigate(`/private_sector`);
     } else if (selectedValue == "option4") {
@@ -63,14 +65,16 @@ export default function Government() {
       <form action="" onSubmit={handleSubmit}>
         <div>
           <div className="heading">
-            Does your parents working in Government Sector and have following
-            benefits?
+            Does your parents working in{" "}
+            <span className="highlight">Government Sector</span> and have
+            following benefits?
           </div>
           <h2>
             <div className="container">
               <div className="group">
                 <div className="text-container">
-                  Father got directly recruited to
+                  Father got{" "}
+                  <span className="highlight">directly recruited</span> to
                   <Box>
                     <FormControl>
                       <InputLabel className="demo-simple-select-label">
@@ -125,7 +129,8 @@ export default function Government() {
                   </div>
                 ) : null}
                 <div className="text-container">
-                  Mother got directly recruited to
+                  Mother got{" "}
+                  <span className="highlight">directly recruited</span> to
                   <Box>
                     <FormControl>
                       <InputLabel className="demo-simple-select-label">
