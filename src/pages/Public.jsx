@@ -37,6 +37,8 @@ export default function Public() {
       navigate(`/PrivateFather`);
     } else if (selectedValue == "option4" && mother == "option3") {
       navigate(`/PrivateMother`);
+    } else if (selectedValue == "option2" && mother == "option4") {
+      navigate(`/public_non_creamy`);
     } else if (selectedValue == "option4" && mother == "option4") {
       navigate(`/public_non_creamy`);
     } else {
