@@ -76,7 +76,7 @@ export default function Public() {
                           Other Public Sector Undertakings
                         </MenuItem>
                         <MenuItem value={"option3"}>Private Sector</MenuItem>
-                        <MenuItem value={"option4"}>Others</MenuItem>
+                        <MenuItem value={"option4"}>Other</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
@@ -102,7 +102,7 @@ export default function Public() {
                           Other Public Sector Undertakings
                         </MenuItem>
                         <MenuItem value={"option3"}>Private Sector</MenuItem>
-                        <MenuItem value={"option4"}>Others</MenuItem>
+                        <MenuItem value={"option4"}>Other</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>

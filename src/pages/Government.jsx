@@ -94,7 +94,7 @@ export default function Government() {
                           Other Government Sector
                         </MenuItem>
                         <MenuItem value={"option4"}>Private Sector</MenuItem>
-                        <MenuItem value={"option5"}>Others</MenuItem>
+                        <MenuItem value={"option5"}>Other</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
@@ -118,7 +118,7 @@ export default function Government() {
                           <MenuItem value={"option1"}>
                             Group A/Class 1 before his 40 years of age
                           </MenuItem>
-                          <MenuItem value={"option2"}>Others</MenuItem>
+                          <MenuItem value={"option2"}>Other</MenuItem>
                         </Select>
                       </FormControl>
                     </Box>
@@ -149,7 +149,7 @@ export default function Government() {
                           Other Government Sector
                         </MenuItem>
                         <MenuItem value={"option4"}>Private Sector</MenuItem>
-                        <MenuItem value={"option5"}>Others</MenuItem>
+                        <MenuItem value={"option5"}>Other</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>

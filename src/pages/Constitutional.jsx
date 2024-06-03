@@ -32,6 +32,8 @@ export default function Constitutional() {
       navigate(`/constitutional_creamy`);
     } else if (selectedValue == "option5" && mother == "option5") {
       navigate(`/constitutional_non_creamy`);
+    } else if (selectedValue == "option5" && mother == "option7") {
+      navigate(`/constitutional_non_creamy`);
     } else if (selectedValue == "option6" && mother == "option6") {
       navigate(`/private_sector`);
     } else if (selectedValue == "option6" && mother == "option7") {
@@ -50,14 +52,14 @@ export default function Constitutional() {
         <div>
           <h1 className="heading">
             Does your parent currently working in{" "}
-            <span>constitutional authorities</span> and have any one of the
-            following benefits?
+            <span className="highlight">constitutional authorities</span> and
+            have any one of the following benefits?
           </h1>
           <h2>
             <div className="container">
               <div className="group">
                 <div className="text-container">
-                  Father currently working as
+                  Father <span className="highlight">currently working</span> as
                   <Box>
                     <FormControl>
                       <InputLabel className="demo-simple-select-label">
@@ -78,14 +80,14 @@ export default function Constitutional() {
                           Other Constitutional Authorities
                         </MenuItem>
                         <MenuItem value={"option6"}>Private Sector</MenuItem>
-                        <MenuItem value={"option7"}>Others</MenuItem>
+                        <MenuItem value={"option7"}>Other</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
                 </div>
 
                 <div className="text-container">
-                  Mother currently working as
+                  Mother <span className="highlight">currently working</span> as
                   <Box>
                     <FormControl>
                       <InputLabel className="demo-simple-select-label">
@@ -106,7 +108,7 @@ export default function Constitutional() {
                           Other Constitutional Authorities
                         </MenuItem>
                         <MenuItem value={"option6"}>Private Sector</MenuItem>
-                        <MenuItem value={"option7"}>Others</MenuItem>
+                        <MenuItem value={"option7"}>Other</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>

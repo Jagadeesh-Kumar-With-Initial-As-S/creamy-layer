@@ -25,7 +25,9 @@ export default function PrivateMother() {
 
   return (
     <div>
-      <div className="heading">Mother belong to Private Sector</div>
+      <div className="heading">
+        <span className="highlight">Mother</span> belong to Private Sector
+      </div>
       <form onSubmit={handleSubmit}>
         <div className="container">
           <div className="group">

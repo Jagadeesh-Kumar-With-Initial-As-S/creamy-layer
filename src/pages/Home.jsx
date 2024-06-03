@@ -67,7 +67,7 @@ export default function Home() {
                         <MenuItem value={"option4"}>
                           Public Sector Undertakings
                         </MenuItem>
-                        <MenuItem value={"option5"}>Others</MenuItem>
+                        <MenuItem value={"option5"}>Other</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
