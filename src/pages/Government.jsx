@@ -42,6 +42,12 @@ export default function Government() {
       navigate(`/government_creamy`);
     } else if (selectedValue == "option2" && father == "option1") {
       navigate(`/government_creamy`);
+    } else if (
+      selectedValue == "option2" &&
+      father == "option2" &&
+      mother == "option5"
+    ) {
+      navigate(`/government_non_creamy`);
     } else if (selectedValue == "option2" && mother == "option3") {
       navigate(`/government_non_creamy`);
     } else if (selectedValue == "option3" && mother == "option3") {
