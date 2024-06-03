@@ -12,7 +12,7 @@ export default function Private_Creamy() {
             {/* Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837. */}
             You have <span className="highlight">no age</span> relaxation. You
             are <span className="highlight">not eligible</span> for reservations
-            and benefits provided by the government{" "}
+            and benefits provided by the government.
           </div>
           <div className="">
             Hint: You belong to creamy layer if annual income of your parent for{" "}

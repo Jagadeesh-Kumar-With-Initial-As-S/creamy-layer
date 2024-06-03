@@ -12,14 +12,15 @@ export default function PrivateFatherCreamy() {
             {/* Coded by Jagadeesh Kumar . S. You can reach Jagadeesh Kumar . S on mobile number which is 7397285837. */}
             You have <span className="highlight">no age</span> relaxation. You
             are <span className="highlight">not eligible</span> for reservations
-            and benefits provided by the government{" "}
+            and benefits provided by the government.
           </div>
           <div className="">
-            Hint: You belong to creamy layer if annual income of your father for{" "}
+            <span className="highlight">Hint:</span> You belong to creamy layer
+            if annual income of your father for{" "}
             <span className="highlight">past three consecutive years</span> is
             more than <span className="highlight">₹800000</span> while
             <span className="highlight"> not including salary</span> and{" "}
-            <span className="highlight">income from agriculture</span>
+            <span className="highlight">income from agriculture.</span>
           </div>
         </div>
       </div>

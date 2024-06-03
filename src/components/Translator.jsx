@@ -13,8 +13,9 @@ const Translator = () => {
         "google_translate_element"
       );
       duplicate_google_translate_counter++;
+    } else {
+      Window.location.reload();
     }
-    // Window.location.reload();
   };
   useEffect(() => {
     var addScript = document.createElement("script");

@@ -11,7 +11,7 @@ export default function Constitutional_Creamy() {
           <div className="text-container">
             You have <span className="highlight">no age</span> relaxation. You
             are <span className="highlight">not eligible</span> for reservations
-            and benefits provided by the government{" "}
+            and benefits provided by the government.
           </div>
         </div>
       </div>
